@@ -72,7 +72,15 @@ public class Bar {
 				daysRemaining = (timeInSeconds / (60 * 60)) / 24;
 				
 				bar.setProgress(progress);
-				bar.setTitle(format(barTitle + " &f[" + daysRemaining + "d " + hoursRemaining + "h " + minutesRemaining + "m " + secondsRemaining + "s]"));
+				if (timeInSeconds >= 3600 && timeInSeconds < 86400) {
+					bar.setTitle(format(barTitle + " &f[" + hoursRemaining + "h " + minutesRemaining + "m " + secondsRemaining + "s]"));
+				} else if (timeInSeconds >= 60 && timeInSeconds < 3600) {
+					bar.setTitle(format(barTitle + " &f[" + minutesRemaining + "m " + secondsRemaining + "s]"));
+				} else if (timeInSeconds < 60) {
+					bar.setTitle(format(barTitle + " &f[" + secondsRemaining + "s]"));
+				} else {
+					bar.setTitle(format(barTitle + " &f[" + daysRemaining + "d " + hoursRemaining + "h " + minutesRemaining + "m " + secondsRemaining + "s]"));
+				}
 				bar.setVisible(true);
 				
 				progress = progress - interval;
