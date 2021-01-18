@@ -1,0 +1,65 @@
+name: BossBarTimer
+version: 1.2.0
+description: Adds the ability to create a BossBar Timer that counts down from a specified duration.
+
+author: LoadXBare
+
+main: me.loadxbare.bossbartimer.Main
+database: false
+
+commands:
+  bbt:
+    usage: /bbt
+    permission: bbt.run
+    permission-message: You do not have permission to perform this command!
+
+permissions:
+  bbt.admin:
+    description: Grants permission to use all /bbt commands
+    children:
+      bbt.color: true
+      bbt.duration: true
+      bbt.help: true
+      bbt.info: true
+      bbt.run: true
+      bbt.start: true
+      bbt.stop: true
+      bbt.title: true
+  bbt.color:
+    description: Grants permission to use /bbt color
+    default: op
+    children:
+      bbt.run: true
+  bbt.duration:
+    description: Grants permission to use /bbt duration
+    default: op
+    children:
+      bbt.run: true
+  bbt.help:
+    description: Grants permission to use /bbt help
+    default: op
+    children:
+      bbt.run: true
+  bbt.info:
+    description: Grants permission to use /bbt info
+    default: op
+    children:
+      bbt.run: true
+  bbt.run:
+    description: Grants permission to use /bbt
+    default: op
+  bbt.start:
+    description: Grants permission to use /bbt start
+    default: op
+    children:
+      bbt.run: true
+  bbt.stop:
+    description: Grants permission to use /bbt stop
+    default: op
+    children:
+      bbt.run: true
+  bbt.title:
+    description: Grants permission to use /bbt title
+    default: op
+    children:
+      bbt.run: true
