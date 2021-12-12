@@ -1,4 +1,10 @@
 # BossBar Timer
+<br></br>
+### This plugin is no longer maintained!
+Some things may no longer work.
+
+In addition to this I'd also like to add that at the time of programming this I had a very limited amount of knowledge in the Java programming language so the code is likely nowhere near as efficient as it could be and likely contains bugs.
+<br></br>
 ## Plugin Functionality
 Usually players must keep an eye on in-game chat in order to know how long it is until an event happens on a server (e.g. a restart). BossBar Timer aims to provide a better way to visualise this by instead utilising the BossBar in order to create a countdown timer.
 Plugin features include, but are not limited to:
